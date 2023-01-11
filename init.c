@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "codec/base64.h"
+#include "codec/url.h"
 
 void init()
 {
@@ -29,11 +30,33 @@ void init()
 				base64_decode(in, out);
 				printf("解密后字符串：%s\n", out);
 			}
-			else
+		}
+		if (!strcmp(type, "url"))
+		{
+			if (!strcmp(method, "encode"))
 			{
-				printf("语法错误，输入encode或decode\n");
+				url_encode(in, out);
+				printf("加密后字符串：%s\n", out);
+			}
+			else if (!strcmp(method, "decode"))
+			{
+				url_decode(in, out);
+				printf("解密后字符串：%s\n", out);
 			}
 		}
+
+		//Debug
+		/*
+		for (int i = 0; i < strlen(in); i++)
+			printf("%c", (unsigned char)in[i]);
+		printf("\n");
+		for (int i = 0; i < strlen(out); i++)
+			printf("%c ", (unsigned char)out[i]);
+		printf("\n");
+		printf("%d", strlen(in));
+		printf("\n");
+		*/
+
 		system("pause");
 		system("cls");
 	}
