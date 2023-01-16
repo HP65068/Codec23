@@ -7,7 +7,7 @@
 
 
 ### v1.0
-#### 添加md5算法(感谢Zunawe)
+#### 添加md5算法 (感谢[Zunawe](https://github.com/Zunawe))
 
 ### v1.1
 #### 添加url算法
