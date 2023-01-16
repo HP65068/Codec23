@@ -6,7 +6,7 @@
 ## Update
 
 
-### v1.0
+### v1.2
 #### 添加md5算法 (感谢[Zunawe](https://github.com/Zunawe))
 
 ### v1.1
