@@ -3,7 +3,7 @@
 
 void hex_encode(const char* origin_str, char* output)
 {
-	//±àÂë±í
+	//Â±Ã Ã‚Ã«Â±Ã­
 	char encode_table[17] = "0123456789ABCDEF";
 
 	int str_len = strlen(origin_str);
@@ -20,14 +20,14 @@ void hex_encode(const char* origin_str, char* output)
 
 void hex_decode(const char* origin_str, char* output)
 {
-	//½âÂë±í
+	//Â½Ã¢Ã‚Ã«Â±Ã­
 	short decode_table[71] = { 0,0,0,0,0,0,0,0,0,0,
-							   0,0,0,0,0,0,0,0,0,0,
-							   0,0,0,0,0,0,0,0,0,0,
-							   0,0,0,0,0,0,0,0,0,0,
-							   0,0,0,0,0,0,0,0,0,1,
-							   2,3,4,5,6,7,8,9,0,0,
-							   0,0,0,0,0,10,11,12,13,14,15 };
+				   0,0,0,0,0,0,0,0,0,0,
+				   0,0,0,0,0,0,0,0,0,0,
+				   0,0,0,0,0,0,0,0,0,0,
+				   0,0,0,0,0,0,0,0,0,1,
+				   2,3,4,5,6,7,8,9,0,0,
+				   0,0,0,0,0,10,11,12,13,14,15 };
 
 	int str_len = strlen(origin_str);
 	int index = 0;
