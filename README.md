@@ -5,6 +5,8 @@
 
 ## Update
 
+### v1.1
+#### 添加hex算法
 
 ### v1.2
 #### 添加md5算法 (感谢[Zunawe](https://github.com/Zunawe))
