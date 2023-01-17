@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+
 #include "codec/base64.h"
 #include "codec/url.h"
 #include "codec/md5.h"
+#include "codec/hex.h"
 
 void init()
 {
@@ -32,7 +34,7 @@ void init()
 				printf("½âÃÜºó×Ö·û´®: %s\n", out);
 			}
 		}
-		if (!strcmp(type, "url"))
+		else if (!strcmp(type, "url"))
 		{
 			if (!strcmp(method, "encode"))
 			{
@@ -45,7 +47,7 @@ void init()
 				printf("½âÃÜºó×Ö·û´®: %s\n", out);
 			}
 		}
-		if (!strcmp(type, "md5"))
+		else if (!strcmp(type, "md5"))
 		{
 			if (!strcmp(method, "encode"))
 			{
@@ -62,18 +64,19 @@ void init()
 
 			}
 		}
-
-		//Debug
-		/*
-		for (int i = 0; i < strlen(in); i++)
-			printf("%c", (unsigned char)in[i]);
-		printf("\n");
-		for (int i = 0; i < strlen(out); i++)
-			printf("%c ", (unsigned char)out[i]);
-		printf("\n");
-		printf("%d", strlen(in));
-		printf("\n");
-		*/
+		else if (!strcmp(type, "hex"))
+		{
+			if (!strcmp(method, "encode"))
+			{
+				hex_encode(in, out);
+				printf("¼ÓÃÜºó×Ö·û´®: %s\n", out);
+			}
+			else if (!strcmp(method, "decode"))
+			{
+				hex_decode(in, out);
+				printf("½âÃÜºó×Ö·û´®: %s\n", out);
+			}
+		}
 
 		system("pause");
 		system("cls");
